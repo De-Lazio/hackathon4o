@@ -1,0 +1,62 @@
+def get_course_content(theme: str) -> str:
+    """
+    Function to retrieve course content based on a given theme.
+    
+    Parameters:
+    theme (str): The theme for which the course content is requested.
+    
+    Returns:
+    str: The formatted course content corresponding to the theme.
+    
+    Prompt to Guide the Assistant:
+    "Provide detailed course content for the theme '{theme}'. The content should include an introduction, key topics covered, and a brief summary. Make sure to use clear and concise language, and format the response with headings and bullet points where appropriate."
+    
+    Example Usage:
+> get_course_content('Python')
+>     'Introduction: Welcome to the Python course!\n\nKey Topics:\n- Variables\n- Data Types\n- Control Structures\n- Functions\n- Modules\n\nSummary: By the end of this course, you will have a strong understanding of Python programming basics.'
+>     """
+>     # Placeholder dictionary with themes and their corresponding course contents
+>     course_contents = {
+>         'Python': {
+>             'Introduction': 'Welcome to the Python course!',
+>             'Key Topics': [
+>                 'Variables',
+>                 'Data Types',
+>                 'Control Structures',
+>                 'Functions',
+>                 'Modules'
+>             ],
+>             'Summary': 'By the end of this course, you will have a strong understanding of Python programming basics.'
+>         },
+>         'Data Science': {
+>             'Introduction': 'Welcome to the Data Science course!',
+>             'Key Topics': [
+>                 'Data Analysis',
+>                 'Visualization',
+>                 'Machine Learning',
+>                 'Statistical Methods'
+>             ],
+>             'Summary': 'By the end of this course, you will be proficient in various data science techniques and tools.'
+>         },
+>         'Web Development': {
+>             'Introduction': 'Welcome to the Web Development course!',
+>             'Key Topics': [
+>                 'HTML',
+>                 'CSS',
+>                 'JavaScript',
+>                 'Backend Frameworks'
+>             ],
+>             'Summary': 'By the end of this course, you will be able to create dynamic and responsive websites.'
+>         }
+>     }
+> 
+>     content = course_contents.get(theme, None)
+>     if content:
+>         formatted_content = (
+>             f"Introduction: {content['Introduction']}\n\n"
+>             f"Key Topics:\n- " + "\n- ".join(content['Key Topics']) + "\n\n"
+>             f"Summary: {content['Summary']}"
+>         )
+>         return formatted_content
+>     else:
+>         return 'Course content not found for the given theme.'
