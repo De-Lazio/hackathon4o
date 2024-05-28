@@ -1,4 +1,6 @@
+import streamlit as st
 import requests
+
 API_TOKEN= "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"
 API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
