@@ -1,7 +1,6 @@
 import streamlit as st
 import replicate
 
-os.environ['REPLICATE_API_TOKEN'] = "r8_5Pqkd23E108t2fPesIUtSQHpXZRGf0Q14KdFt"
 
 input = {
     "prompt": "Give me a class of classic physics",
