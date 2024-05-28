@@ -1,8 +1,8 @@
 streamlit
 flash_attn
 numpy
-Pillow
-Requests
+pillow
+requests
 torch
 torchvision
 transformers
