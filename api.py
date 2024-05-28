@@ -1,3 +1,4 @@
+import straam as st
 import replicate
 
 os.environ['REPLICATE_API_TOKEN'] = "r8_5Pqkd23E108t2fPesIUtSQHpXZRGf0Q14KdFt"
@@ -12,5 +13,7 @@ for event in replicate.stream(
     "meta/llama-2-7b",
     input=input
 ):
+
+    st.write(event)
     print(event, end="")
 #=> ", he orders a martini. everyone in the place stops and s...
