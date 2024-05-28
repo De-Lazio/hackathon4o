@@ -1,4 +1,4 @@
-import stream as st
+import streamlit as st
 import replicate
 
 os.environ['REPLICATE_API_TOKEN'] = "r8_5Pqkd23E108t2fPesIUtSQHpXZRGf0Q14KdFt"
