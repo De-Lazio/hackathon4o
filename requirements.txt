@@ -1,4 +1,5 @@
 streamlit
+packaging
 flash_attn
 numpy
 pillow
