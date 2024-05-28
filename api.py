@@ -1,3 +1,4 @@
+import streamlit as st
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("gpt2")
