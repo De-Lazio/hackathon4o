@@ -1,19 +1,16 @@
-import streamlit as st
-from transformers import AutoModelForCausalLM, AutoTokenizer
+import replicate
 
-model = AutoModelForCausalLM.from_pretrained("gpt2")
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
+os.environ['REPLICATE_API_TOKEN'] = "r8_5Pqkd23E108t2fPesIUtSQHpXZRGf0Q14KdFt"
 
-prompt = "GPT2 is a model developed by OpenAI."
+input = {
+    "prompt": "Give me a class of classic physics",
+    "temperature": 0.95,
+    "max_new_tokens": 500
+}
 
-input_ids = tokenizer(prompt, return_tensors="pt").input_ids
-
-gen_tokens = model.generate(
-    input_ids,
-    do_sample=True,
-    temperature=0.9,
-    max_length=100,
-)
-gen_text = tokenizer.batch_decode(gen_tokens)[0]
-st.write(output)
-print(output)
+for event in replicate.stream(
+    "meta/llama-2-7b",
+    input=input
+):
+    print(event, end="")
+#=> ", he orders a martini. everyone in the place stops and s...
