@@ -24,7 +24,7 @@ def prompt_runer(prompt):
         output = "Error in generation of reponse"
     return output
 def generate_cours(topic):
-    prompt_eng = f"{topic}"
+    prompt_eng = f"Generate me a well-written course on: {topic}"
     return prompt_runer(prompt_eng)
 
 #Function for generating the cours questions which takes the theme
