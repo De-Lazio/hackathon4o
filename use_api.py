@@ -6,5 +6,5 @@ course_content = api.generate_cours(topic)
 
 api.generate_evaluation_questions(course_content)
 
-user_question = "Difine me the accelation"
+user_question = "Define acceleration for me"
 api.answer_question(course_content, user_question)
