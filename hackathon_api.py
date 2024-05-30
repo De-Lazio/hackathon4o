@@ -36,7 +36,3 @@ def generate_evaluation_questions(course_content):
 def answer_question(course_content, user_question):
     prompt_eng = f"Based on the following course content, answer the user's question:\n\nCourse content: {course_content}\n\nUser's question: {user_question}",
     return prompt_runer(prompt_eng)
-    
-
-topic = "explain me the force in physics"
-print(generate_cours(topic))
